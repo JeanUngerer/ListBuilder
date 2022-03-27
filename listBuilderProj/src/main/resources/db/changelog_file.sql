@@ -1,0 +1,1 @@
+create table tettsss (ID bigint, testName varchar(255));
