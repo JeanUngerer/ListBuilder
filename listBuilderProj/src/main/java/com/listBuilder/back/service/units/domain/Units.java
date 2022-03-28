@@ -9,7 +9,7 @@ public class Units {
 	
 	private Long id;
 	
-	private Integer name;
+	private String name;
 	
 	private Long bookId;
 
@@ -45,7 +45,7 @@ public class Units {
 
 	private Integer magicLvl;
 
-	private String baseCost;
+	private Integer baseCost;
 	
 	
 }

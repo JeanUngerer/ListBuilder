@@ -23,7 +23,7 @@ public class UnitsEntity {
 	private Long id;
 
 	@Column(name = "name")
-	private Integer name;
+	private String name;
 
 	@Column(name = "bookId")
 	private Long bookId;
@@ -77,6 +77,6 @@ public class UnitsEntity {
 	private Integer magicLvl;
 
 	@Column(name = "baseCost")
-	private String baseCost;
+	private Integer baseCost;
 
 }

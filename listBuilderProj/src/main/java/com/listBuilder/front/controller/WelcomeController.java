@@ -12,12 +12,12 @@ import com.listBuilder.back.db.units.repository.UnitsRepository;
 public class WelcomeController {
 
 	// private final UserRepository repository;
-	// private final MachineRepository repoMachine;
-//	  private List<MachineEntity> machines;
+	// private final UnitsRepository repoUnits;
+//	  private List<UnitsEntity> units;
 //	  private List<String> tasks = Arrays.asList("a", "b", "c", "d", "e", "f", "g");
 
 	WelcomeController(UnitsRepository repoUnits) {
-		// this.machines = repoMachine.findAll();
+		// this.units = repoUnits.findAll();
 	}
 
 	// inject via application.properties
@@ -26,8 +26,8 @@ public class WelcomeController {
 
 	@GetMapping("/")
 	public String main(Model model) {
-		model.addAttribute("message", "Liste des Machines");
-		// model.addAttribute("machines", machines);
+		model.addAttribute("message", "Liste des Unités");
+		// model.addAttribute("units", units);
 
 		return "welcome"; // view
 	}
