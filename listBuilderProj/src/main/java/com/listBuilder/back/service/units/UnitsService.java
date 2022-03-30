@@ -2,7 +2,6 @@ package com.listBuilder.back.service.units;
 
 import java.util.List;
 
-import com.listBuilder.back.buisness.error.ListBuilderException;
 import com.listBuilder.back.service.units.domain.Units;
 
 public interface UnitsService {
