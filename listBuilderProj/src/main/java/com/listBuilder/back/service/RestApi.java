@@ -8,11 +8,11 @@ import com.listBuilder.back.db.units.repository.UnitsRepository;
 public class RestApi {
 
 	//private final AllBooksRepository repository;
-	private final UnitsRepository repoUnits;
+	//private final UnitsRepository repoUnits;
 
 	RestApi( UnitsRepository repoUnits) {
 		//this.repository = repository;
-		this.repoUnits = repoUnits;
+		//this.repoUnits = repoUnits;
 	}
 
 //	// Aggregate root
