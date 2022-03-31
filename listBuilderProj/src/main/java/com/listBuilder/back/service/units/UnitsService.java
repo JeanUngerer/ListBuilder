@@ -8,22 +8,22 @@ import com.listBuilder.back.service.units.domain.Units;
 public interface UnitsService {
 
 
-	Units getUnitsById(long id);
+	public Units getUnitsById(long id) throws Exception;
 
-	List<Units> getAllUnits();
+	List<Units> getAllUnits() throws Exception;
 
-	String createUnits(Long id, String name, Long bookId, String unitType, String unitCategory, Boolean namedUnique,
+	public String createUnits(Long id, String name, Long bookId, String unitType, String unitCategory, Boolean namedUnique,
 			Boolean defaultMount, Integer movement, Integer closeCombatSkills, Integer shootingSkills, Integer strengh,
 			Integer toughness, Integer wounds, Integer initiative, Integer attacks, Integer leadership,
 			Integer baseArmor, Integer baseInvul, Integer magicLvl, Integer baseCost);
 
-	Units updateUnits(Long id, Long id2, Long id3, String name, Long bookId, String unitType, String unitCategory,
+	public Units updateUnits(Long id, Long id2, Long id3, String name, Long bookId, String unitType, String unitCategory,
 			Boolean namedUnique, Boolean defaultMount, Integer movement, Integer closeCombatSkills,
 			Integer shootingSkills, Integer strengh, Integer toughness, Integer wounds, Integer initiative,
 			Integer attacks, Integer leadership, Integer baseArmor, Integer baseInvul, Integer magicLvl,
 			Integer baseCost);
 
-	void deleteUnits(Long id);
+	public void deleteUnits(Long id);
 
 	
 }

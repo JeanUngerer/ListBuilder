@@ -29,21 +29,21 @@ public class UnitsControllerImpl implements UnitsController {
 	private UnitsService unitsService;
 
 	@Override
-	@GetMapping("/machines/{id}")
+	@GetMapping("/units/{id}")
 	public ResponseEntity<UnitsDTO> getUnitsById(@PathVariable Long id) throws Exception {
 		Units unit = unitsService.getUnitsById(id);
 		return new ResponseEntity<>(UnitsAdapter.adaptToDto(unit), HttpStatus.OK);
 	}
 
 	@Override
-	@GetMapping("/machines")
+	@GetMapping("/units")
 	public ResponseEntity<List<UnitsDTO>> getAllUnits() throws Exception {
 		List<Units> units = unitsService.getAllUnits();
 		return new ResponseEntity<>(UnitsAdapter.adaptToDto(units), HttpStatus.OK);
 	}
 
 	@Override
-	@PostMapping(path = "/machine", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(path = "/unit", consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public ResponseEntity<String> createUnits(@RequestBody UnitsDTO dto) {
 		String unit = unitsService.createUnits(
@@ -72,7 +72,7 @@ public class UnitsControllerImpl implements UnitsController {
 	}
 
 	@Override
-	@PutMapping(path = "/machine/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PutMapping(path = "/unit/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public ResponseEntity<UnitsDTO> updateUnits(@PathVariable Long id, @RequestBody UnitsDTO dto) {
 		Units unit = unitsService.updateUnits(id, dto.getId(),
@@ -101,10 +101,10 @@ public class UnitsControllerImpl implements UnitsController {
 	}
 
 	@Override
-	@DeleteMapping("/machine/{id}")
+	@DeleteMapping("/unit/{id}")
 	public ResponseEntity<String> deleteUnits(@PathVariable Long id) {
 		unitsService.deleteUnits(id);
-		return new ResponseEntity<>("The machine " + id + " has been deleted", HttpStatus.OK);
+		return new ResponseEntity<>("The unit " + id + " has been deleted", HttpStatus.OK);
 	}
 
 }
