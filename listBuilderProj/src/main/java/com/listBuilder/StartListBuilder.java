@@ -20,5 +20,4 @@ public class StartListBuilder extends SpringBootServletInitializer {
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 	    return builder.sources(StartListBuilder.class);
 	}
-
 }
