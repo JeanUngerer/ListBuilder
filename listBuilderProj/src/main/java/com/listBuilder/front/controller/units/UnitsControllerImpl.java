@@ -93,7 +93,7 @@ public class UnitsControllerImpl implements UnitsController {
 				dto.getAttacks(),
 				dto.getLeadership(),
 				dto.getBaseArmor(),
-				dto.getBaseInvul(),
+	 			dto.getBaseInvul(),
 				dto.getMagicLvl(),
 				dto.getBaseCost());
 		

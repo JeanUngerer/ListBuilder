@@ -39,18 +39,18 @@ public class EquipmentServiceImpl implements EquipmentService {
 	{
 		validateId(id);
 		
-		EquipmentEntity units = equipmentRepository.findById(id).orElseThrow(() -> new ListBuilderException(ListBuilderEventCode.NOT_FOUND, "no equipment found"));
-		return EquipmentBackAdapter.adaptToBusinessObject(units);
+		EquipmentEntity equipment = equipmentRepository.findById(id).orElseThrow(() -> new ListBuilderException(ListBuilderEventCode.NOT_FOUND, "no equipment found"));
+		return EquipmentBackAdapter.adaptToBusinessObject(equipment);
 		
 	}
 	
 	@Override
 	public List<Equipment> getAllEquipment() throws ListBuilderException {
-		List<EquipmentEntity> units = equipmentRepository.findAll();
-		if (units == null || units.isEmpty()) {
+		List<EquipmentEntity> equipment = equipmentRepository.findAll();
+		if (equipment == null || equipment.isEmpty()) {
 			throw new ListBuilderException(ListBuilderEventCode.NOT_FOUND, "No equipment found in DB");
 		}
-		return EquipmentBackAdapter.adaptToBusinessObject(units);
+		return EquipmentBackAdapter.adaptToBusinessObject(equipment);
 	}
 	
 
